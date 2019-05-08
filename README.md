@@ -1,4 +1,4 @@
-I'm sick of not being able to easily tell my friends which plugins I used on my Ableton project.
+I'm sick of not being able to easily tell my friends which plugins I used in my Ableton project.
 
 Usage:
 
