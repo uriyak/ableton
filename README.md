@@ -4,4 +4,4 @@ Usage:
 
     python als.py path\to\project.als
 
-Tested on Python 3.7, Ableton 10.0.6
+Tested on Windows 10, Python 3.7, Ableton 10.0.6 project file.
