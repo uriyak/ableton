@@ -38,12 +38,12 @@ def main():
         print('[x] All plugins:')
         print('\n'.join(plugins))
 
-        print('\n[x] Per plugin:')
+        print('\n[x] Tracks containing each plugin:')
         for p in plugins:
             print(p)
             print('\n'.join(f'\t{t}' for t in [k for k in res.keys() if p in res[k]]))
 
-        print('\n[x] Per track:')
+        print('\n[x] Plugins in each track:')
         for track, plugins in res.items():
             print(track)
             print('\n'.join(f'\t{p}' for p in plugins))
