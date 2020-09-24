@@ -22,7 +22,11 @@ def main():
         plugins = set()
         for vst in track.findall('.//VstPluginInfo'):
             props = {c.tag: dict(c.items()) for c in list(vst)}
-            plugins.add(props['PlugName']['Value'])
+            plugins.add(props['PlugName']['Value'] + ' [VST2]')
+
+        for vst3 in track.findall('.//Vst3PluginInfo'):
+            plugins.add(vst3.find('Name').attrib['Value'] + ' [VST3]')
+
         if plugins:
             res[f"{track.find('Name/UserName').get('Value')}#{track.get('Id')}"] = plugins
 
