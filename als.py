@@ -28,7 +28,9 @@ def main():
             plugins.add(vst3.find('Name').attrib['Value'] + ' [VST3]')
 
         if plugins:
-            res[f"{track.find('Name/UserName').get('Value')}#{track.get('Id')}"] = plugins
+            # res[f"{track.find('Name/UserName').get('Value')}#{track.get('Id')}"] = plugins
+            track_name = track.find('Name/EffectiveName').get('Value')
+            res[f"{track_name}#{track.get('Id')}"] = plugins
 
     if not res:
         print('[x] No VST plugins found')
